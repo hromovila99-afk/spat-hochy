@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>Списки в HTML</title>
+    <style>
+        body {
+            background-image: url('background.jpg');
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-attachment: fixed;
+            margin: 0;
+            padding: 20px;
+        }
+        
+        h2 {
+            color: red;
+            font-size: 4;
+            border-bottom: 3px solid red;
+            padding-bottom: 5px;
+            clear: both;
+        }
+        
+        .marquee {
+            background-color: #ffeb3b;
+            padding: 10px;
+            font-size: 18px;
+            font-weight: bold;
+            margin: 20px 0;
+        }
+        
+        .food-image {
+            width: 200px;
+            height: 150px;
+            border: 3px solid #333;
+            float: left;
+            margin: 0 50px 20px 50px;
+        }
+        
+        .computer-image {
+            width: 200px;
+            height: 150px;
+            border: 3px solid #333;
+            float: right;
+            margin: 0 50px 20px 50px;
+        }
+        
+        .clearfix::after {
+            content: "";
+            display: table;
+            clear: both;
+        }
+    </style>
+</head>
+<body>
+background-image: url('background.jpg');
+background-repeat: no-repeat;  /* без повторения */
+background-size: cover;        /* растягивается на весь экран */
+background-attachment: fixed;  /* не двигается при прокрутке */
+
+    <!-- Первый список с изображением -->
+    <div class="clearfix">
+        <img src="фрукты-овощи.jpg" alt="Фрукты и овощи" class="food-image">
+        <h2>Продукты питания</h2>
+    </div>
+    <ol type="I">
+        <li>
+            <strong>Фрукты</strong>
+            <ul style="list-style-type: '▪ ';">
+                <li>Яблоки
+                    <ol type="a">
+                        <li>Зеленые</li>
+                        <li>Красные</li>
+                    </ol>
+                </li>
+                <li>Апельсины</li>
+            </ul>
+            <ol>
+                <li>Груши</li>
+            </ol>
+        </li>
+        <li>
+            <strong>Овощи</strong>
+            <ol>
+                <li>Картофель</li>
+                <li>Морковь</li>
+                <li>Капуста
+                    <ol type="a">
+                        <li>Брокколи</li>
+                        <li>Цветная</li>
+                    </ol>
+                </li>
+                <li>Свекла</li>
+            </ol>
+        </li>
+        <li>Системный блок
+            <ol type="a">
+                <li></li>
+            </ol>
+        </li>
+    </ol>
+
+    <!-- Второй список с изображением -->
+    <div class="clearfix">
+        <img src="системный блок.jpg" alt="Системный блок" class="computer-image">
+        <h2>Устройства персонального компьютера</h2>
+    </div>
+    <ul>
+        <li><strong>Материнская плата</strong>
+            <ul>
+                <li style="list-style-type: 'o ';">Сетевая карта</li>
+                <li style="list-style-type: '• ';">Аудио карта</li>
+                <li style="list-style-type: '▪ ';">Видео карта</li>
+            </ul>
+        </li>
+        <li><strong>Процессор</strong></li>
+        <li><strong>Оперативная память</strong></li>
+        <li><strong>Винчестер (жёсткий диск)</strong></li>
+        <li><strong>Устройства вывода информации</strong>
+            <ol>
+                <li>Монитор</li>
+                <li>Принтер</li>
+                <li>Аудио колонки</li>
+            </ol>
+        </li>
+        <li><strong>Устройства ввода информации</strong>
+            <ol type="I">
+                <li>Клавиатура</li>
+                <li>Мышь</li>
+                <li>Сканер</li>
+                <li>Микрофон</li>
+                <li>Планшет</li>
+            </ol>
+        </li>
+    </ul>
+
+    <!-- Бегущая строка -->
+    <marquee behavior="scroll" direction="left" scrollamount="8" class="marquee">
+        Виды списков в HTML
+    </marquee>
+
+</body>
+</html>
